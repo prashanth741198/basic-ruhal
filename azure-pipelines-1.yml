@@ -6,7 +6,7 @@
 trigger:
 - master
 
-name: $(Build.DefinitionName)_$(Date:yyyy-MM-dd)$(Rev:.r)
+
 
 pool:
   vmImage: ubuntu-latest
@@ -25,9 +25,9 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: '**/*.war'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    TargetFolder: '$(build.artifactstagingdirectory)/demo1/'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/demo1/dist/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
