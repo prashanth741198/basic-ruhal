@@ -11,6 +11,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+name: $(Build.DefinitionName)_$(Date:yyyy-MM-dd)$(Rev:.r)
+
+
 steps:
 - task: Maven@3
   inputs:
