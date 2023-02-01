@@ -28,6 +28,6 @@ steps:
     TargetFolder: '$(build.artifactstagingdirectory)/demo1/'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/demo1/dist/'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/demo1/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
